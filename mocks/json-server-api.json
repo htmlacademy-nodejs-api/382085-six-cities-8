@@ -1,0 +1,359 @@
+{
+  "api": {
+    "titles": [
+        "Beautiful & luxurious studio at great location",
+        "Some fascinating title. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Another interesting title. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Intriguing title. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Promising title. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Another promising title. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Informative title with some details on offer. A quick brown fox jumps over a lazy dog. Lorem ipsum dolor sit amet",
+        "Simple title"
+    ],
+    "offerTypes": [
+      "Apartment",
+      "House",
+      "Room",
+      "Hotel"
+    ],
+    "descriptions": [
+      "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.",
+      "some description",
+      "simple description",
+      "complicated description",
+      "detailed description",
+      "no description",
+      "boring description"
+    ],
+    "comforts": [
+      "Breakfast",
+      "AirConditioning",
+      "LaptopFriendlyWorkspace",
+      "BabySeat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "cities": [
+      {
+        "name": "Johannesburg",
+        "location": {
+          "latitude": -26.206886,
+          "longitude": 28.042428,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Manila",
+        "location": {
+          "latitude": 14.583266,
+          "longitude": 120.979633,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Jakarta",
+        "location": {
+          "latitude": -6.175,
+          "longitude": 106.8275,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Kolkata",
+        "location": {
+          "latitude": 22.5675,
+          "longitude": 88.37,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Mumbai",
+        "location": {
+          "latitude": 19.076111,
+          "longitude": 72.8775,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Budapest",
+        "location": {
+          "latitude": 47.4925,
+          "longitude": 19.051389,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Bordeaux",
+        "location": {
+          "latitude": 44.84,
+          "longitude":  -0.58,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Oslo",
+        "location": {
+          "latitude": 59.913333,
+          "longitude": 10.738889,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Baghdad",
+        "location": {
+          "latitude": 33.315278,
+          "longitude": 44.366111,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Porto",
+        "location": {
+          "latitude": 41.162142,
+          "longitude": -8.621953,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Amsterdam",
+        "location": {
+          "latitude": 52.35514938496378,
+          "longitude": 4.673877537499948,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Reykjavík",
+        "location": {
+          "latitude": 64.146667,
+          "longitude": -21.94,
+          "zoom": 8
+        }
+      },
+      {
+        "name": "Istanbul",
+        "location": {
+          "latitude": 41.013611,
+          "longitude": 28.955,
+          "zoom": 4
+        }
+      },
+      {
+        "name": "Beijing",
+        "location": {
+          "latitude": 39.906667,
+          "longitude": 116.397,
+          "zoom": 4
+        }
+      }
+    ],
+    "locations": [
+      {
+        "latitude": 57.35514938496378,
+        "longitude": 4.673877537499948,
+        "zoom": 8
+      },
+      {
+        "latitude": 52.35514938496378,
+        "longitude": 8.673877537499948,
+        "zoom": 8
+      },
+      {
+        "latitude": -26.206886,
+        "longitude": 28.042428,
+        "zoom": 8
+      },
+      {
+        "latitude": 14.583266,
+        "longitude": 120.979633,
+        "zoom": 8
+      },
+      {
+        "latitude": -6.175,
+        "longitude": 106.8275,
+        "zoom": 8
+      },
+      {
+        "latitude": 22.5675,
+        "longitude": 88.37,
+        "zoom": 8
+      },
+      {
+        "latitude": 19.076111,
+        "longitude": 72.8775,
+        "zoom": 8
+      },
+      {
+        "latitude": 47.4925,
+        "longitude": 19.051389,
+        "zoom": 8
+      },
+      {
+        "latitude": 44.84,
+        "longitude":  -0.58,
+        "zoom": 8
+      },
+      {
+        "latitude": 59.913333,
+        "longitude": 10.738889,
+        "zoom": 8
+      },
+      {
+        "latitude": 33.315278,
+        "longitude": 44.366111,
+        "zoom": 8
+      },
+      {
+        "latitude": 41.162142,
+        "longitude": -8.621953,
+        "zoom": 8
+      },
+      {
+        "latitude": 52.35514938496378,
+        "longitude": 5.673877537499948,
+        "zoom": 8
+      },
+      {
+        "latitude": 64.146667,
+        "longitude": -21.94,
+        "zoom": 8
+      },
+      {
+        "latitude": 41.013611,
+        "longitude": 28.955,
+        "zoom": 4
+      },
+      {
+        "latitude": 39.906667,
+        "longitude": 116.397,
+        "zoom": 4
+      }
+    ],
+    "users": [
+      "Andrey Kolmogorov",
+      "Arnold Schwarzenegger",
+      "Arthur Schopenhauer",
+      "Bernhard Riemann",
+      "Bill Gates",
+      "Bill Murray",
+      "Bjarne Stroustroup",
+      "Bram Moolenaar",
+      "Carl Gauss",
+      "Carl Gustav Jung",
+      "Chris Christodoulou",
+      "Derek Trucks",
+      "Donald Glover",
+      "Edmund Husserl",
+      "Eric Clapton",
+      "Franco Columbu",
+      "Ildemar Rodriguez",
+      "Immanuel Kant",
+      "Isaac Newton",
+      "Jean-Paul Belmondo",
+      "Jordan Rhodes",
+      "Joseph Fourier",
+      "Kendrick Lamar",
+      "Leonhard Euler",
+      "Margaret Thatcher",
+      "Marshall Mathers",
+      "Mike Portnoy",
+      "Mike Tyson",
+      "Mircea Eliade",
+      "Niklaus Wirth",
+      "Nikolay Lobachevsky",
+      "Sigmund Freud",
+      "Sofi Kovalevskaya",
+      "Yoanis Meneses"
+    ],
+    "emails": [
+      "user@domain.com",
+      "john.doe@example.com",
+      "account@mail-service.net",
+      "another.person@another-service.org",
+      "fighting.animals.testing@some-mail.com",
+      "free@durov.su",
+      "comrade@kremlin.ru",
+      "radio@head.com"
+    ],
+    "offerImages": [
+      "/img/offers/image1.jpg",
+      "/img/offers/image2.jpg",
+      "/img/offers/image3.jpg",
+      "/img/offers/image4.jpg",
+      "/img/offers/image5.jpg",
+      "/img/offers/image1.jpg"
+    ],
+    "avatarImages": [
+      "/img/avatars/user1.jpg",
+      "/img/avatars/user2.jpg",
+      "/img/avatars/user3.jpg",
+      "/img/avatars/user4.jpg",
+      "/img/avatars/user5.jpg",
+      "/img/avatars/user6.jpg",
+      "/img/avatars/user7.jpg"
+
+    ],
+    "offer": {
+      "id": "6af6f711-c28d-4121-82cd-e0b462a27f00",
+      "title": "Beautiful & luxurious studio at great location",
+      "type": "apartment",
+      "price": 120,
+      "city": {
+        "name": "Amsterdam",
+        "location": {
+          "latitude": 52.35514938496378,
+          "longitude": 4.673877537499948,
+          "zoom": 8
+        }
+      },
+      "location": {
+        "latitude": 52.35514938496378,
+        "longitude": 4.673877537499948,
+        "zoom": 8
+      },
+      "isFavorite": false,
+      "isPremium": false,
+      "rating": 4,
+      "description": "A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.",
+      "bedrooms": 3,
+      "goods": [
+        "Heating"
+      ],
+      "host": {
+        "name": "Oliver Conner",
+        "avatarUrl": "https://url-to-image/image.png",
+        "isPro": false
+      },
+      "images": [
+        "https://url-to-image/image.png"
+      ],
+      "maxAdults": 4
+    },
+    "offers": [
+      {
+        "id": "6af6f711-c28d-4121-82cd-e0b462a27f00",
+        "title": "Beautiful & luxurious studio at great location",
+        "type": "apartment",
+        "price": 120,
+        "city": {
+          "name": "Amsterdam",
+          "location": {
+            "latitude": 52.35514938496378,
+            "longitude": 4.673877537499948,
+            "zoom": 8
+          }
+        },
+        "location": {
+          "latitude": 52.35514938496378,
+          "longitude": 4.673877537499948,
+          "zoom": 8
+        },
+        "isFavorite": false,
+        "isPremium": false,
+        "rating": 4,
+        "previewImage": "https://url-to-image/image.png"
+      }
+    ]
+  }
+}
