@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs';
 
-import { Offer } from '../types/offer.type.js';
-import { City } from '../types/city.type.js';
+import { Offer } from '../../types/offer.type.js';
+import { City } from '../../types/city.type.js';
 import { FileReader } from './file-reader.interface.js';
-import { OfferType } from '../types/offer-type.enum.js';
-import { User } from '../types/user.type.js';
-import { Coordinates } from '../types/coordinates.type.js';
-import { Comfort } from '../types/comfort.enum.js';
+import { OfferType } from '../../types/offer-type.enum.js';
+import { User } from '../../types/user.type.js';
+import { Coordinates } from '../../types/coordinates.type.js';
+import { Comfort } from '../../types/comfort.enum.js';
 
 
 export class TSVFileReader implements FileReader {
@@ -66,29 +66,6 @@ export class TSVFileReader implements FileReader {
       coordinates,
     ] = line.split('\t');
 
-    console.log(
-      `
-     title,          ${title}
-     description,    ${description}
-     publicationTime ${publicationTime}
-     city,           ${city}
-     previewPic,     ${previewPic}
-     photos,         ${photos}
-     isPremium,      ${isPremium}
-     isBookmarked,   ${isBookmarked}
-     rating,         ${rating}
-     type,           ${type}
-     rooms,          ${rooms}
-     guests,         ${guests}
-     price,          ${price}
-     comforts,       ${comforts}
-     firstName,      ${firstName}
-     lastName,       ${lastName}
-     userEmail,      ${userEmail}
-     avatarPath,     ${avatarPath}
-     coordinates,    ${coordinates}
-      `
-    );
     return {
       title,
       description,
