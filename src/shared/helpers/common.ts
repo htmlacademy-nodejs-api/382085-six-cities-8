@@ -14,6 +14,7 @@ export function createUniqueRandomSequence(from: number, to: number): () => numb
     while (sequence.has(res)) {
       res = randomFromRange(from, to);
     }
+    sequence.add(res);
     return res;
   };
 }
