@@ -6,7 +6,6 @@ import {
   randomFromRange
 } from '../../helpers/common.js';
 import dayjs from 'dayjs';
-import { User } from '../../types/user.type.js';
 
 const PRICE_MIN = 100;
 const PRICE_MAX = 100000;
@@ -15,7 +14,7 @@ const LAST_WEEK_DAY = 7;
 export class TSVOfferGenerator implements OfferGenerator {
   constructor(
     private mockData: JsonServerData
-  ) {}
+  ) { }
 
   generate(): string {
     const title = getRandomArrayElement(this.mockData.titles);
