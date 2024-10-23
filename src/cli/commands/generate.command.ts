@@ -1,8 +1,8 @@
 import got, { RequestError } from 'got';
-import { appendFile } from 'node:fs/promises';
 import { TSVOfferGenerator } from '../../shared/libs/offer-generator/tsv-offer-generator.js';
 import { JsonServerData } from '../../shared/types/json-server-data.type.js';
 import { Command } from './command.interface.js';
+import { TSVFileWriter } from '../../shared/libs/file-writer/tsv-file-writer.js';
 
 export class GenerateCommand implements Command {
   private initialData: JsonServerData;
@@ -41,9 +41,11 @@ export class GenerateCommand implements Command {
 
   private async write(filePath: string, offerCount: number): Promise<void> {
     const generator = new TSVOfferGenerator(this.initialData);
+    const tsvFileWriter = new TSVFileWriter(filePath);
+
     for (let i = 0; i < offerCount; i += 1) {
       const newOffer = generator.generate();
-      await appendFile(filePath, `${newOffer}\n`, { encoding: 'utf-8' });
+      await tsvFileWriter.write(newOffer);
     }
   }
 }

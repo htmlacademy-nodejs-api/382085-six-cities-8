@@ -17,11 +17,11 @@ export class TSVFileWriter implements FileWriter {
     this.stream = createWriteStream(this.fileName, options);
   }
 
-  async write(data: string): Promise<void> {
+  async write(data: string): Promise<unknown> {
     const writeSuccess = this.stream.write(`${data}\n`);
 
     if (!writeSuccess) {
-      await new Promise((resolve) => {
+      return new Promise((resolve) => {
         this.stream.once('drain', () => resolve(true));
       });
     }
