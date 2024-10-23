@@ -1,6 +1,7 @@
 export {
   getRandomArrayItems,
   getRandomArrayElement,
+  getErrorMessage,
   randomFromRange,
   createUniqueRandomSequence,
   createUniqueIdSequence

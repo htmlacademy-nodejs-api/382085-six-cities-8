@@ -1,4 +1,8 @@
 
+export function getErrorMessage(error: unknown): string {
+  return error instanceof Error ? error.message : '';
+}
+
 export function randomFromRange(from: number, to: number): number {
   return Math.floor(Math.random() * (to - from)) + from;
 }
