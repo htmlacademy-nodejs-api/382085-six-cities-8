@@ -1,20 +1,27 @@
 import { readFileSync } from 'node:fs';
+import EventEmitter from 'node:events';
+import { createReadStream } from 'node:fs';
 
-import { Offer } from '../types/offer.type.js';
-import { City } from '../types/city.type.js';
+import { Offer } from '../../types/offer.type.js';
+import { City } from '../../types/city.type.js';
 import { FileReader } from './file-reader.interface.js';
-import { OfferType } from '../types/offer-type.enum.js';
-import { User } from '../types/user.type.js';
-import { Coordinates } from '../types/coordinates.type.js';
-import { Comfort } from '../types/comfort.enum.js';
+import { OfferType } from '../../types/offer-type.enum.js';
+import { User } from '../../types/user.type.js';
+import { Coordinates } from '../../types/coordinates.type.js';
+import { Comfort } from '../../types/comfort.enum.js';
 
 
-export class TSVFileReader implements FileReader {
+// events: 'line' - offer (Offer)
+//          'end' - end of parsing (number of events)
+export class TSVFileReader extends EventEmitter implements FileReader {
   private rawData = '';
+  private CHUNK_SIZE = 16384; // Math.pow(2, 15);
 
   constructor(
     private fileName: string
-  ) {}
+  ) {
+    super();
+  }
 
   private validateRawData(): void {
     if (!this.rawData) {
@@ -66,29 +73,6 @@ export class TSVFileReader implements FileReader {
       coordinates,
     ] = line.split('\t');
 
-    console.log(
-      `
-     title,          ${title}
-     description,    ${description}
-     publicationTime ${publicationTime}
-     city,           ${city}
-     previewPic,     ${previewPic}
-     photos,         ${photos}
-     isPremium,      ${isPremium}
-     isBookmarked,   ${isBookmarked}
-     rating,         ${rating}
-     type,           ${type}
-     rooms,          ${rooms}
-     guests,         ${guests}
-     price,          ${price}
-     comforts,       ${comforts}
-     firstName,      ${firstName}
-     lastName,       ${lastName}
-     userEmail,      ${userEmail}
-     avatarPath,     ${avatarPath}
-     coordinates,    ${coordinates}
-      `
-    );
     return {
       title,
       description,
@@ -115,8 +99,32 @@ export class TSVFileReader implements FileReader {
       .map((line) => this.parseLineToOffer(line));
   }
 
-  public read(): void {
+  public async read(): Promise<void> {
     this.rawData = readFileSync(this.fileName, { encoding: 'utf-8' });
+    const options = {
+      highWaterMark: this.CHUNK_SIZE,
+      encoding: 'utf8' as const,
+    };
+    const readStream = createReadStream(this.fileName, options);
+
+    let remainingData = '';
+    let nextLinePosition = -1;
+    let readLinesCount = 0;
+    for await (const chunk of readStream) {
+      remainingData += chunk.toString();
+
+      while ((nextLinePosition = remainingData.indexOf('\n')) >= 0) {
+        nextLinePosition += 1;
+        const completeLine = remainingData.slice(0, nextLinePosition);
+        remainingData = remainingData.slice(nextLinePosition);
+        readLinesCount += 1;
+
+        const parsedOffer = this.parseLineToOffer(completeLine);
+        this.emit('line', parsedOffer);
+      }
+    }
+
+    this.emit('end', readLinesCount);
   }
 
   public toArray(): Offer[] {
