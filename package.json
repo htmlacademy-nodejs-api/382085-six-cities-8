@@ -20,6 +20,7 @@
     "@types/node": "20.12.7",
     "@typescript-eslint/eslint-plugin": "6.7.0",
     "@typescript-eslint/parser": "6.7.0",
+    "dotenv": "16.3.2",
     "eslint": "8.49.0",
     "eslint-config-htmlacademy": "9.1.1",
     "rimraf": "5.0.1",
@@ -32,6 +33,7 @@
     "npm": ">=10"
   },
   "dependencies": {
-    "chalk": "4.1.2"
+    "chalk": "4.1.2",
+    "cross-env": "7.0.3"
   }
 }
