@@ -43,7 +43,6 @@
     "chalk": "4.1.2",
     "convict": "6.2.4",
     "convict-format-with-validator": "6.2.0",
-    "cross-env": "7.0.3",
     "dayjs": "1.11.10",
     "got": "14.2.1",
     "inversify": "6.0.2",
