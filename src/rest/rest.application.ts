@@ -15,10 +15,8 @@ export class RestApplication {
   ) {}
 
   public async init() {
-    this.logger.info('Rest application initialization');
-    this.logger.info(`port is ${this.config.get('PORT')}`);
-    this.logger.info(`port is ${this.config.get('SALT')}`);
-    this.logger.info(`port is ${this.config.get('DB_HOST')}`);
+    this.logger.info('Application initialization complete');
+    this.logger.info(`Port is ${this.config.get('PORT')}`);
   }
 }
 

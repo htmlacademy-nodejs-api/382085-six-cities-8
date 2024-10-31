@@ -1,8 +1,6 @@
 import { injectable } from 'inversify';
-import { resolve } from 'node:path';
 import { Logger as PinoInstance, TransportMultiOptions, pino, transport } from 'pino';
 import { Logger } from './logger.interface.js';
-import { getCurrentModuleDirectoryPath } from '../../helpers/file-system.js';
 
 @injectable()
 export class PinoLogger implements Logger {
@@ -10,22 +8,15 @@ export class PinoLogger implements Logger {
   private readonly logger: PinoInstance;
 
   constructor() {
-    const moduleDirectoryPath = getCurrentModuleDirectoryPath();
-    const logFilePath = 'logs/rest.log';
-    const resultLogPath = resolve(moduleDirectoryPath, '../../../', logFilePath);
 
+    // логирование в stdout
     const config: TransportMultiOptions = {
       targets: [
         {
           target: 'pino/file',
           level: 'debug',
-          options: {}
+          options: {} // по умолчанию destination: 1 что означает дескриптор stdout
         },
-        {
-          target: 'pino/file',
-          level: 'info',
-          options: { destination: resultLogPath }
-        }
       ]
     };
 
